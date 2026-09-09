@@ -91,4 +91,54 @@ Este squad é vendido em dois planos:
 
 ---
 
+Como ativar a geração de imagens do Diego Design
+
+O squad inclui um agent (Diego Design) capaz de gerar imagens automaticamente para os seus criativos, usando o modelo Nano Banana (Google Gemini). Para isso funcionar, você precisa configurar sua própria chave de API — é rápido e o Google oferece um nível gratuito.
+
+Passo 1 — Crie sua chave de API gratuita
+Acesse aistudio.google.com/apikey
+Faça login com sua conta Google
+Clique em Create API key
+Copie a chave gerada (começa com AIza...) e guarde em um lugar seguro
+
+⚠️ Sua chave de API é pessoal, como uma senha. Não compartilhe publicamente nem cole em prints ou grupos.
+
+Passo 2 — Configure a chave no seu ambiente
+
+No terminal, defina a variável de ambiente com sua chave:
+
+macOS/Linux:
+
+bash
+export GEMINI_API_KEY="sua_chave_aqui"
+
+Windows (PowerShell):
+
+powershell
+$env:GEMINI_API_KEY="sua_chave_aqui"
+
+Para que essa configuração fique permanente (não precisar repetir toda vez que abrir o terminal), adicione a linha ao seu arquivo de perfil do shell (.zshrc, .bashrc ou similar no macOS/Linux) ou configure como variável de ambiente do sistema no Windows.
+
+Passo 3 — Reinicie o Claude Code
+
+Feche e abra o Claude Code novamente para que ele reconheça a nova variável de ambiente.
+
+Passo 4 — Teste
+
+Peça ao squad para gerar uma imagem de teste, por exemplo:
+
+Diego, gere uma imagem de teste de um post para Instagram, estilo minimalista, cores azul e branco
+
+Se tudo estiver certo, a imagem será gerada automaticamente.
+
+Dúvidas frequentes
+
+Preciso pagar pela API do Gemini? O Google oferece um nível gratuito com um limite de gerações por dia/mês, suficiente para uso moderado. Se seu volume de conteúdo for alto, pode ser necessário migrar para um plano pago do Google AI Studio.
+
+Posso usar outro gerador de imagem (ChatGPT/GPT Image) em vez do Nano Banana? Sim, é possível trocar a ferramenta configurada — se precisar de ajuda com isso, é só chamar no suporte.
+
+Minha chave parou de funcionar, o que fazer? Gere uma nova chave em aistudio.google.com/apikey e repita o Passo 2.
+
+Precisa de ajuda? Se você adquiriu o plano com suporte (30 dias), entre em contato pelos canais combinados na compra.
+
 Feito por [Toral](https://alltoral.netlify.app/) · Diretor criativo, 12+ anos em branding e liderança criativa
