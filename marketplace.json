@@ -1,12 +1,10 @@
 {
   "name": "alltoral-marketing-tools",
-  "owner": {
-    "name": "Toral"
-  },
+  "owner": { "name": "Toral" },
   "plugins": [
     {
-      "name": "marketing-squad",
-      "source": "./plugins/marketing-squad",
+      "name": "squad-alltoral",
+      "source": "./plugins/squad-alltoral",
       "description": "Squad de agents para produção de conteúdo de marketing/Instagram"
     }
   ]
