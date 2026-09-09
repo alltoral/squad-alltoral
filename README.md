@@ -55,7 +55,7 @@ A **Nina Notion** depende de uma conexão ativa entre o Claude e a sua conta do 
 | 02 | **Carlos Carrossel** | Transforma o conteúdo em carrosséis prontos para publicar. |
 | 03 | **Lara Linkedin** | Escreve o texto principal para o banco de conteúdo do LinkedIn. |
 | 04 | **Diego Design** | Cria as peças visuais que acompanham cada conteúdo, seguindo a identidade da marca. |
-| 05 | **Vera Veredicto** | Revisa o tom e dá o veredito final de brand voice antes da publicação. |
+| 05 | **Vitor Vetor** | Segundo designer visual, cuida das peças com uma composição mais gráfica (formas/vetores). |
 | 06 | **Nina Notion** | Organiza tudo no Notion: calendário, banco de conteúdo e status de cada peça. |
 
 > Confira se essas descrições batem com o que cada agente faz de verdade no seu repositório antes de publicar.
@@ -71,8 +71,8 @@ A **Nina Notion** depende de uma conexão ativa entre o Claude e a sua conta do 
 
 Para adaptar o squad à sua marca:
 
-- Ajuste o tom de voz descrito no agente de revisão (**Vera Veredicto**)
-- Atualize as referências visuais e paleta de cores no agente de design (**Diego Design**)
+- Ajuste o tom de voz de referência usado por **Carlos Carrossel** e **Lara Linkedin** antes de escrever qualquer copy
+- Atualize as referências visuais e paleta de cores nos agentes de design (**Diego Design** e **Vitor Vetor**)
 - Troque os canais de distribuição no agente de organização (**Nina Notion**) se você não usa Notion
 
 ## Suporte e treinamento
