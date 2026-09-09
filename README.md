@@ -55,7 +55,7 @@ A **Nina Notion** depende de uma conexão ativa entre o Claude e a sua conta do 
 | 02 | **Carlos Carrossel** | Transforma o conteúdo em carrosséis prontos para publicar. |
 | 03 | **Lara Linkedin** | Escreve o texto principal para o banco de conteúdo do LinkedIn. |
 | 04 | **Diego Design** | Cria as peças visuais que acompanham cada conteúdo, seguindo a identidade da marca. |
-| 05 | **Vitor Vetor** | Segundo designer visual, cuida das peças com uma composição mais gráfica (formas/vetores). |
+| 05 | **Vera Veredicto** | Revisa o tom e dá o veredito final de brand voice antes da publicação. |
 | 06 | **Nina Notion** | Organiza tudo no Notion: calendário, banco de conteúdo e status de cada peça. |
 
 > Confira se essas descrições batem com o que cada agente faz de verdade no seu repositório antes de publicar.
@@ -63,13 +63,14 @@ A **Nina Notion** depende de uma conexão ativa entre o Claude e a sua conta do 
 ## Como usar
 
 O squad tem um pipeline pronto que roda os 6 agentes na ordem certa, com checkpoints pra você
-decidir tema, formato, ângulo e aprovação em cada etapa:
+decidir tema, formato, ângulo e aprovação em cada etapa. Cada rodada produz uma peça de Instagram
+e uma peça de LinkedIn a partir do mesmo tema:
 
 1. Personalize os dados de marca (veja **Personalização** abaixo) — o pipeline se recusa a rodar
    com os arquivos ainda no template padrão
 2. Rode `/marketing-squad:rodar-squad-social` dentro do seu projeto
-3. Responda os checkpoints conforme o pipeline avança (foco de pesquisa, formato, ângulo, aprovação
-   de conteúdo, aprovação final)
+3. Responda os checkpoints conforme o pipeline avança (foco de pesquisa, formato, ângulo, revisão
+   de tom da **Vera Veredicto**, aprovação final)
 4. A **Nina Notion** organiza o resultado final no seu calendário de conteúdo, se a integração com
    o Notion já estiver configurada
 
@@ -88,7 +89,7 @@ rodar. Isso vive em `marketing-squad-marketplace/plugins/marketing-squad/`:
 - `pipeline/data/research-brief.md` — contexto estático de mercado que **Rita Referência** usa como
   ponto de partida
 - `assets/manual-de-marca/`, `assets/identidade/` — paleta de cores, tipografia, logo e mascote
-  reais que **Diego Design** e **Vitor Vetor** tratam como fonte de verdade inegociável
+  reais que **Diego Design** trata como fonte de verdade inegociável
 - `assets/posts-finalizados/` — acervo de peças já publicadas, opcional mas recomendado
 - `skills/notion/SKILL.md` — schema real dos seus dois bancos do Notion, se for usar a **Nina
   Notion**

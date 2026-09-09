@@ -1,22 +1,22 @@
 # Task: create-carrossel
 
 **Agente**: Carlos Carrossel · **Passo**: 6 (`criar-copy-instagram`) · **Execução**: inline ·
-**Pré-condição**: `formato-escolhido.md` do tema diz "Carrossel"
+**Pré-condição**: `formato-escolhido.md` diz "Carrossel"
 
 ## Objetivo
 
-Escrever a copy completa de um carrossel de Instagram para o ângulo já escolhido de um tema.
+Escrever a copy completa de um carrossel de Instagram para o ângulo já escolhido.
 
 ## Inputs
 
-- `squads/social-content/output/{run_id}/selected-angle.md` (seção do tema)
-- `squads/social-content/output/{run_id}/research-brief-tema-{a|b}.md`
+- `squads/social-content/output/{run_id}/selected-angle.md`
+- `squads/social-content/output/{run_id}/research-brief.md`
 - `squads/social-content/pipeline/data/tone-of-voice.md`
 - `squads/social-content/pipeline/data/company.md`
 
 ## Passos
 
-1. Leia o ângulo escolhido e o research-brief do tema.
+1. Leia o ângulo escolhido e o research-brief.
 2. Calibre o diagnóstico de pré-escrita: nível de consciência do público, sofisticação de mercado,
    Big Idea e driver psicológico dominante para esse ângulo.
 3. Apresente as 6 opções de `tone-of-voice.md`, recomende uma com justificativa, e espere a escolha
@@ -31,7 +31,7 @@ Escrever a copy completa de um carrossel de Instagram para o ângulo já escolhi
 
 ## Output
 
-`squads/social-content/output/{run_id}/instagram-copy-tema-{a|b}.md`.
+`squads/social-content/output/{run_id}/instagram-copy.md`.
 
 ## Critérios de qualidade
 

@@ -6,7 +6,7 @@ description: Cria páginas nos dois bancos de dados do Notion (Instagram e Linke
 # Skill: notion
 
 Skill usada só pela **Nina Notion** (Passo 11, `publicar-notion`) para transportar a copy final e a
-arte final aprovadas de cada tema para os dois calendários de conteúdo que o usuário já mantém no
+arte final aprovadas da rodada para os dois calendários de conteúdo que o usuário já mantém no
 Notion — um banco para Instagram, um para LinkedIn. Nunca decide conteúdo, só cria a página.
 
 ## Configuração (obrigatória antes do Passo 11)
@@ -31,7 +31,7 @@ Notion — um banco para Instagram, um para LinkedIn. Nunca decide conteúdo, s�
 | [PREENCHA AQUI] | rich_text | Legenda completa | sim |
 | [PREENCHA AQUI] | select | `formato-escolhido.md` (Carrossel/Post Estático) | sim |
 | [PREENCHA AQUI] | select | Classificação subjetiva (ex: Objetivo) | não — deixar em branco sem confiança real |
-| [PREENCHA AQUI] | files | Arte final (`visuals-tema-{a\|b}/`) | sim |
+| [PREENCHA AQUI] | files | Arte final (`visuals/`) | sim |
 
 ## Schema — banco de LinkedIn
 
@@ -42,21 +42,23 @@ Notion — um banco para Instagram, um para LinkedIn. Nunca decide conteúdo, s�
 | [PREENCHA AQUI] | title | Hook | sim |
 | [PREENCHA AQUI] | rich_text | Corpo do post | sim |
 | [PREENCHA AQUI] | select | Classificação subjetiva (ex: Pilar) | não — deixar em branco sem confiança real |
-| [PREENCHA AQUI] | files | Arte final (`visuals-tema-{a\|b}/linkedin.png`) | sim |
+| [PREENCHA AQUI] | files | Arte final (`visuals/linkedin.png`) | sim |
 
 ## Como criar uma página
 
-Uma chamada por página — nunca agrupar Instagram e LinkedIn, nem os dois temas, numa única
-chamada.
+Uma chamada por página — nunca agrupar Instagram e LinkedIn numa única chamada.
 
 ```bash
-node skills/notion/scripts/create-notion-page.js NOTION_DB_INSTAGRAM config-instagram-tema-a.json
-node skills/notion/scripts/create-notion-page.js NOTION_DB_LINKEDIN config-linkedin-tema-a.json
+node "${CLAUDE_PLUGIN_ROOT}/skills/notion/scripts/create-notion-page.js" NOTION_DB_INSTAGRAM config-instagram.json
+node "${CLAUDE_PLUGIN_ROOT}/skills/notion/scripts/create-notion-page.js" NOTION_DB_LINKEDIN config-linkedin.json
 ```
 
-`config-*.json` é o corpo da API do Notion (chave `properties`, seguindo o schema documentado
-acima), montado a partir da copy e do formato já aprovados daquele tema — nunca a chave `parent`,
-que o script já preenche a partir do primeiro argumento.
+O script vive dentro do plugin (`${CLAUDE_PLUGIN_ROOT}`); os arquivos `config-*.json` de cada
+chamada ficam no projeto atual, junto do resto do `output/{run_id}/` da rodada.
 
-Se uma das 4 chamadas falhar, reporte o erro exato retornado pela API (o script já imprime o corpo
-da resposta) e siga tentando as demais — uma falha não derruba as outras.
+`config-*.json` é o corpo da API do Notion (chave `properties`, seguindo o schema documentado
+acima), montado a partir da copy e do formato já aprovados — nunca a chave `parent`, que o script
+já preenche a partir do primeiro argumento.
+
+Se uma das 2 chamadas falhar, reporte o erro exato retornado pela API (o script já imprime o corpo
+da resposta) e siga tentando a outra — uma falha não derruba a outra.

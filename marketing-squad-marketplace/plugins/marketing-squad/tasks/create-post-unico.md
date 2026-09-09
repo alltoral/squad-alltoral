@@ -1,23 +1,23 @@
 # Task: create-post-unico
 
 **Agente**: Carlos Carrossel · **Passo**: 6 (`criar-copy-instagram`) · **Execução**: inline ·
-**Pré-condição**: `formato-escolhido.md` do tema diz "Post Estático"
+**Pré-condição**: `formato-escolhido.md` diz "Post Estático"
 
 ## Objetivo
 
-Escrever a copy completa de um post estático de Instagram para o ângulo já escolhido de um tema —
-uma frase de impacto que sobrevive sozinha, fora do post.
+Escrever a copy completa de um post estático de Instagram para o ângulo já escolhido — uma frase
+de impacto que sobrevive sozinha, fora do post.
 
 ## Inputs
 
-- `squads/social-content/output/{run_id}/selected-angle.md` (seção do tema)
-- `squads/social-content/output/{run_id}/research-brief-tema-{a|b}.md`
+- `squads/social-content/output/{run_id}/selected-angle.md`
+- `squads/social-content/output/{run_id}/research-brief.md`
 - `squads/social-content/pipeline/data/tone-of-voice.md`
 - `squads/social-content/pipeline/data/company.md`
 
 ## Passos
 
-1. Leia o ângulo escolhido e o research-brief do tema.
+1. Leia o ângulo escolhido e o research-brief.
 2. Calibre o diagnóstico de pré-escrita (nível de consciência, sofisticação de mercado, Big Idea,
    driver psicológico dominante) para esse ângulo.
 3. Apresente as 6 opções de `tone-of-voice.md`, recomende uma com justificativa, e espere a escolha
@@ -33,7 +33,7 @@ uma frase de impacto que sobrevive sozinha, fora do post.
 
 ## Output
 
-`squads/social-content/output/{run_id}/instagram-copy-tema-{a|b}.md`.
+`squads/social-content/output/{run_id}/instagram-copy.md`.
 
 ## Critérios de qualidade
 

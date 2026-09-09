@@ -1,17 +1,16 @@
 # Task: find-and-rank-trends
 
-**Agente**: Rita Referência · **Passo**: 2 (`pesquisa-tendencias`) · **Execução**: subagent (uma
-instância por tema, em paralelo)
+**Agente**: Rita Referência · **Passo**: 2 (`pesquisa-tendencias`) · **Execução**: subagent
 
 ## Objetivo
 
-A partir do foco de pesquisa de um único tema, mapear o terreno de mercado e o terreno cultural
-(memes, atualidades) relevantes, e entregar um brief estruturado que sirva de matéria-prima para a
-geração de ângulos — sem decidir ângulo nenhum.
+A partir do foco de pesquisa da rodada, mapear o terreno de mercado e o terreno cultural (memes,
+atualidades) relevantes, e entregar um brief estruturado que sirva de matéria-prima para a geração
+de ângulos — sem decidir ângulo nenhum.
 
 ## Inputs
 
-- `squads/social-content/output/{run_id}/research-focus.md` — só a seção do tema desta instância.
+- `squads/social-content/output/{run_id}/research-focus.md`
 - `squads/social-content/pipeline/data/research-brief.md` — contexto estático de marca (segmento,
   concorrentes, posicionamento) preenchido pelo usuário.
 - `squads/social-content/pipeline/data/company.md` — quem é a marca, para saber o que é relevante
@@ -19,7 +18,7 @@ geração de ângulos — sem decidir ângulo nenhum.
 
 ## Passos
 
-1. Leia o foco do tema e o contexto estático de marca antes de pesquisar qualquer coisa.
+1. Leia o foco da rodada e o contexto estático de marca antes de pesquisar qualquer coisa.
 2. Rode uma varredura de 5-10 fontes candidatas (`web_search`/`web_fetch`) sobre o tema: dados de
    mercado, comportamento de consumidor, publicações do setor. Aprofunde só nas 3-5 melhores.
 3. Verifique cada achado contra pelo menos uma fonte independente adicional antes de incluí-lo;
@@ -32,7 +31,7 @@ geração de ângulos — sem decidir ângulo nenhum.
 
 ## Output
 
-`squads/social-content/output/{run_id}/research-brief-tema-{a|b}.md`, formato Markdown:
+`squads/social-content/output/{run_id}/research-brief.md`, formato Markdown:
 
 ```
 ## Achados-Chave

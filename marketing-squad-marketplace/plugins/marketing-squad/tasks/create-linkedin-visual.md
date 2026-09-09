@@ -1,7 +1,6 @@
 # Task: create-linkedin-visual
 
-**Agentes**: Diego Design (Tema A) · Vitor Vetor (Tema B) · **Passo**: 9 (`gerar-artes`) ·
-**Execução**: subagent, em paralelo — cada designer só no seu tema
+**Agente**: Diego Design · **Passo**: 9 (`gerar-artes`) · **Execução**: subagent
 
 ## Objetivo
 
@@ -10,8 +9,7 @@ registro e o formato da plataforma, nunca a arte de Instagram redimensionada ou 
 
 ## Inputs
 
-- `squads/social-content/output/{run_id}/linkedin-post-copy-tema-{a|b}.md` (copy aprovada no
-  Passo 8)
+- `squads/social-content/output/{run_id}/linkedin-post-copy.md` (copy aprovada)
 - `squads/social-content/assets/manual-de-marca/`
 - `squads/social-content/assets/identidade/`
 - `squads/social-content/assets/posts-finalizados/`
@@ -29,7 +27,7 @@ registro e o formato da plataforma, nunca a arte de Instagram redimensionada ou 
 
 ## Output
 
-`squads/social-content/output/{run_id}/visuals-tema-{a|b}/linkedin.png`.
+`squads/social-content/output/{run_id}/visuals/linkedin.png`.
 
 ## Critérios de qualidade
 

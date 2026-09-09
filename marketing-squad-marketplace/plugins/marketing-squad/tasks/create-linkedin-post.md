@@ -1,23 +1,22 @@
 # Task: create-linkedin-post
 
-**Agente**: Lara Linkedin · **Passo**: 7 (`criar-copy-linkedin`) · **Execução**: inline (2 temas em
-sequência, mesma execução)
+**Agente**: Lara Linkedin · **Passo**: 7 (`criar-copy-linkedin`) · **Execução**: inline
 
 ## Objetivo
 
-Adaptar o ângulo já escolhido de um tema (e a copy de Instagram já aprovada, quando disponível) ao
-formato e tom nativos do LinkedIn — sem repetir a copy de Instagram literalmente.
+Adaptar o ângulo já escolhido (e a copy de Instagram já aprovada) ao formato e tom nativos do
+LinkedIn — sem repetir a copy de Instagram literalmente.
 
 ## Inputs
 
-- `squads/social-content/output/{run_id}/selected-angle.md` (seção do tema)
-- `squads/social-content/output/{run_id}/instagram-copy-tema-{a|b}.md` (para consistência de
-  mensagem, não para cópia literal)
+- `squads/social-content/output/{run_id}/selected-angle.md`
+- `squads/social-content/output/{run_id}/instagram-copy.md` (para consistência de mensagem, não
+  para cópia literal)
 - `squads/social-content/pipeline/data/tone-of-voice.md`
 
 ## Passos
 
-1. Leia o ângulo selecionado e a copy de Instagram aprovada do mesmo tema.
+1. Leia o ângulo selecionado e a copy de Instagram aprovada.
 2. Apresente as 6 opções de `tone-of-voice.md` (tipicamente "Profissional-mas-Pessoal" é a
    recomendação, mas nunca assumida sem confirmação), recomende uma com justificativa, e espere a
    escolha do usuário.
@@ -31,8 +30,8 @@ formato e tom nativos do LinkedIn — sem repetir a copy de Instagram literalmen
 
 ## Output
 
-`squads/social-content/output/{run_id}/linkedin-post-copy-tema-{a|b}.md`, formato Markdown: HOOK,
-BODY, INSIGHTS, CTA, HASHTAGS.
+`squads/social-content/output/{run_id}/linkedin-post-copy.md`, formato Markdown: HOOK, BODY,
+INSIGHTS, CTA, HASHTAGS.
 
 ## Critérios de qualidade
 
