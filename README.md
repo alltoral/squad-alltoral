@@ -1,4 +1,4 @@
-# Squad de Conteúdo · ALLTORAL
+# Squad · ALLTORAL
 
 Um squad de 6 agentes de IA para criar conteúdo de marketing, rodando no [Claude Code](https://claude.com/claude-code). Cada agente cobre uma etapa do fluxo de produção, do briefing à publicação.
 
