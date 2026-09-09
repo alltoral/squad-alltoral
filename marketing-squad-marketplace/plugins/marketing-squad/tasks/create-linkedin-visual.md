@@ -19,11 +19,14 @@ registro e o formato da plataforma, nunca a arte de Instagram redimensionada ou 
 1. Reaproveite o sistema de design documentado no Passo `create-instagram-visuals` desta mesma
    entrega (mesma paleta e tipografia do manual de marca), mas adapte a composição ao registro mais
    institucional/pessoal do LinkedIn.
-2. Monte a composição usando texto real da copy de LinkedIn aprovada — nunca placeholder.
-3. Garanta contraste mínimo 4,5:1 (WCAG AA) e declare as dimensões exatas usadas.
-4. Se o manual de marca definir elementos de identidade fixos (logo, handle, mascote), posicione-os
+2. Se a peça precisar de uma foto nova (diferente da já resolvida para o Instagram), siga a mesma
+   ordem: acervo próprio → banco de imagens gratuito (skill `stock-images`) → IA como último
+   recurso, só com confirmação explícita do usuário.
+3. Monte a composição usando texto real da copy de LinkedIn aprovada — nunca placeholder.
+4. Garanta contraste mínimo 4,5:1 (WCAG AA) e declare as dimensões exatas usadas.
+5. Se o manual de marca definir elementos de identidade fixos (logo, handle, mascote), posicione-os
    na peça.
-5. Renderize e verifique visualmente a peça antes de considerar a entrega concluída.
+6. Renderize e verifique visualmente a peça antes de considerar a entrega concluída.
 
 ## Output
 
@@ -36,3 +39,5 @@ registro e o formato da plataforma, nunca a arte de Instagram redimensionada ou 
 - [ ] Texto real da copy de LinkedIn aprovada, sem placeholder.
 - [ ] Contraste mínimo 4,5:1.
 - [ ] Peça verificada visualmente antes de concluir.
+- [ ] Se precisou de foto nova, resolvida na ordem acervo próprio → banco gratuito → IA; IA só com
+      confirmação explícita do usuário.

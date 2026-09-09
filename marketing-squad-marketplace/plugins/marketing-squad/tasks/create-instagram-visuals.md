@@ -23,14 +23,20 @@ usuário — nunca uma paleta ou estilo genérico.
    documente cores, tipografia, espaçamento e elementos gráficos que vão ser usados nesta entrega.
    Nunca inventar paleta ou tipografia sem essa fonte.
 2. Confirme o formato (Carrossel ou Post Estático) antes de desenhar.
-3. Monte a composição usando texto real da copy aprovada — nunca placeholder ou lorem ipsum.
-4. Garanta contraste mínimo 4,5:1 (WCAG AA) em todo texto sobre fundo, e tamanhos de fonte legíveis
+3. **Resolva a necessidade de imagem nesta ordem, sem pular etapa:**
+   1. Acervo próprio (`assets/posts-finalizados/`) — custo zero.
+   2. Banco de imagens gratuito (skill `stock-images`, salva em `output/{run_id}/stock-refs/`) —
+      custo zero, só quando o acervo próprio não cobrir a necessidade.
+   3. Geração via IA — **só** se as duas anteriores não resolverem, e só depois de avisar o
+      usuário que vai consumir créditos e receber confirmação explícita.
+4. Monte a composição usando texto real da copy aprovada — nunca placeholder ou lorem ipsum.
+5. Garanta contraste mínimo 4,5:1 (WCAG AA) em todo texto sobre fundo, e tamanhos de fonte legíveis
    no formato final (declare as dimensões exatas usadas, nunca "tamanho aproximado").
-5. Se o manual de marca definir elementos de identidade fixos (logo, handle, mascote), posicione-os
+6. Se o manual de marca definir elementos de identidade fixos (logo, handle, mascote), posicione-os
    nas extremidades da composição em toda peça — nunca no centro, nunca ausentes.
-6. Renderize e verifique visualmente a primeira peça (slide 1 do carrossel, ou o post único) antes
+7. Renderize e verifique visualmente a primeira peça (slide 1 do carrossel, ou o post único) antes
    de considerar o lote inteiro concluído.
-7. Nenhum contador de slide na imagem final — o Instagram já mostra navegação nativa.
+8. Nenhum contador de slide na imagem final — o Instagram já mostra navegação nativa.
 
 ## Output
 
@@ -46,3 +52,5 @@ ou `post.png` se Post Estático, mais a documentação do sistema de design usad
 - [ ] Elementos fixos de identidade presentes, quando definidos no manual de marca.
 - [ ] Primeira peça verificada visualmente antes do lote.
 - [ ] Nenhum contador de slide presente.
+- [ ] Imagem resolvida na ordem acervo próprio → banco gratuito → IA; geração via IA só com
+      confirmação explícita do usuário.

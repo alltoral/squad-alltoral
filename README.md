@@ -114,9 +114,49 @@ Este squad é vendido em dois planos:
 
 ---
 
-Como ativar a geração de imagens do Diego Design
+## Como o Diego Design resolve imagem (sem gastar crédito à toa)
 
-O squad inclui um agent (Diego Design) capaz de gerar imagens automaticamente para os seus criativos, usando o modelo Nano Banana (Google Gemini). Para isso funcionar, você precisa configurar sua própria chave de API — é rápido e o Google oferece um nível gratuito.
+Diego segue uma ordem de prioridade fixa antes de gerar qualquer imagem via IA, justamente para
+evitar custo desnecessário:
+
+1. **Acervo próprio** (`assets/posts-finalizados/`) — suas fotos reais, custo zero.
+2. **Banco de imagens gratuito** (Pexels, via skill `stock-images`) — fotos livres de uso
+   comercial, custo zero.
+3. **Geração via IA** (Nano Banana/Gemini) — **só** quando as duas primeiras não resolvem, e só
+   com a sua confirmação explícita, porque essa etapa consome créditos pagos.
+
+### Como ativar o banco de imagens gratuito (recomendado, sem custo)
+
+Passo 1 — Crie sua chave de API gratuita
+Acesse [pexels.com/api](https://www.pexels.com/api/), faça login/cadastro e gere sua API key.
+Não pede cartão de crédito.
+
+Passo 2 — Configure a chave no seu ambiente
+
+macOS/Linux:
+
+```bash
+export PEXELS_API_KEY="sua_chave_aqui"
+```
+
+Windows (PowerShell):
+
+```powershell
+$env:PEXELS_API_KEY="sua_chave_aqui"
+```
+
+Adicione a linha ao seu arquivo de perfil do shell (`.zshrc`, `.bashrc` ou similar) ou configure
+como variável de ambiente do sistema no Windows, pra não precisar repetir a cada sessão.
+
+Passo 3 — Reinicie o Claude Code para que ele reconheça a nova variável de ambiente.
+
+Com isso configurado, Diego já busca fotos gratuitas automaticamente sempre que o acervo próprio
+não cobrir a necessidade da peça, antes de considerar qualquer geração paga.
+
+### Como ativar a geração de imagens via IA (opcional, tem custo)
+
+Só é necessário se você quiser essa opção como último recurso — o squad funciona perfeitamente
+sem ela, usando só acervo próprio + banco de imagens gratuito.
 
 Passo 1 — Crie sua chave de API gratuita
 Acesse aistudio.google.com/apikey
@@ -128,19 +168,17 @@ Copie a chave gerada (começa com AIza...) e guarde em um lugar seguro
 
 Passo 2 — Configure a chave no seu ambiente
 
-No terminal, defina a variável de ambiente com sua chave:
-
 macOS/Linux:
 
-bash
+```bash
 export GEMINI_API_KEY="sua_chave_aqui"
+```
 
 Windows (PowerShell):
 
-powershell
+```powershell
 $env:GEMINI_API_KEY="sua_chave_aqui"
-
-Para que essa configuração fique permanente (não precisar repetir toda vez que abrir o terminal), adicione a linha ao seu arquivo de perfil do shell (.zshrc, .bashrc ou similar no macOS/Linux) ou configure como variável de ambiente do sistema no Windows.
+```
 
 Passo 3 — Reinicie o Claude Code
 
@@ -152,15 +190,25 @@ Peça ao squad para gerar uma imagem de teste, por exemplo:
 
 Diego, gere uma imagem de teste de um post para Instagram, estilo minimalista, cores azul e branco
 
-Se tudo estiver certo, a imagem será gerada automaticamente.
+Diego só vai gerar via IA depois de confirmar com você que o acervo próprio e o banco de imagens
+gratuito não resolveram — se tudo estiver certo, a imagem será gerada nessa etapa.
 
 Dúvidas frequentes
 
-Preciso pagar pela API do Gemini? O Google oferece um nível gratuito com um limite de gerações por dia/mês, suficiente para uso moderado. Se seu volume de conteúdo for alto, pode ser necessário migrar para um plano pago do Google AI Studio.
+Preciso pagar pela API do Pexels? Não — o plano gratuito é permanente, sem cartão de crédito, com
+limite generoso de requisições por hora.
+
+Preciso configurar o Gemini/Nano Banana? Não é obrigatório. Sem essa chave configurada, Diego
+simplesmente avisa quando uma peça precisaria de geração via IA e explica que a etapa não está
+disponível, sem travar o resto do pipeline.
+
+Preciso pagar pela API do Gemini, se eu ativar? O Google oferece um nível gratuito com um limite de gerações por dia/mês, suficiente para uso moderado. Se seu volume de conteúdo for alto, pode ser necessário migrar para um plano pago do Google AI Studio.
+
+Posso usar outro banco de imagens gratuito (Unsplash, Pixabay) em vez do Pexels? Sim — a lógica é a mesma, só troca o endpoint/chave no script da skill `stock-images`. Se precisar de ajuda com isso, é só chamar no suporte.
 
 Posso usar outro gerador de imagem (ChatGPT/GPT Image) em vez do Nano Banana? Sim, é possível trocar a ferramenta configurada — se precisar de ajuda com isso, é só chamar no suporte.
 
-Minha chave parou de funcionar, o que fazer? Gere uma nova chave em aistudio.google.com/apikey e repita o Passo 2.
+Minha chave parou de funcionar, o que fazer? Gere uma nova chave no site correspondente (Pexels ou Google AI Studio) e repita o passo de configuração.
 
 Precisa de ajuda? Se você adquiriu o plano com suporte (30 dias), entre em contato pelos canais combinados na compra.
 
