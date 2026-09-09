@@ -62,18 +62,40 @@ A **Nina Notion** depende de uma conexão ativa entre o Claude e a sua conta do 
 
 ## Como usar
 
-1. Defina o tema ou briefing inicial (pode vir de você ou da **Rita Referência**)
-2. Rode o agente correspondente à etapa que você precisa
-3. Revise a saída antes de passar para o próximo agente na sequência
-4. A **Nina Notion** organiza o resultado final no seu calendário de conteúdo
+O squad tem um pipeline pronto que roda os 6 agentes na ordem certa, com checkpoints pra você
+decidir tema, formato, ângulo e aprovação em cada etapa:
+
+1. Personalize os dados de marca (veja **Personalização** abaixo) — o pipeline se recusa a rodar
+   com os arquivos ainda no template padrão
+2. Rode `/marketing-squad:rodar-squad-social` dentro do seu projeto
+3. Responda os checkpoints conforme o pipeline avança (foco de pesquisa, formato, ângulo, aprovação
+   de conteúdo, aprovação final)
+4. A **Nina Notion** organiza o resultado final no seu calendário de conteúdo, se a integração com
+   o Notion já estiver configurada
+
+Também dá pra rodar cada agente separadamente fora do pipeline (ex: só pedir pro **Diego Design**
+gerar uma peça avulsa), mas os checkpoints e a leitura dos arquivos do pipeline (`selected-angle.md`,
+`formato-escolhido.md` etc.) são o que garante consistência entre Instagram e LinkedIn.
 
 ## Personalização
 
-Para adaptar o squad à sua marca:
+O squad vem **sem nenhum dado de marca embutido** — cada instalação personaliza o próprio antes de
+rodar. Isso vive em `marketing-squad-marketplace/plugins/marketing-squad/`:
 
-- Ajuste o tom de voz de referência usado por **Carlos Carrossel** e **Lara Linkedin** antes de escrever qualquer copy
-- Atualize as referências visuais e paleta de cores nos agentes de design (**Diego Design** e **Vitor Vetor**)
-- Troque os canais de distribuição no agente de organização (**Nina Notion**) se você não usa Notion
+- `pipeline/data/company.md` — quem é a marca, público, pilares de conteúdo
+- `pipeline/data/tone-of-voice.md` — as 6 opções de tom que **Carlos Carrossel** e **Lara Linkedin**
+  sempre apresentam antes de escrever qualquer copy
+- `pipeline/data/research-brief.md` — contexto estático de mercado que **Rita Referência** usa como
+  ponto de partida
+- `assets/manual-de-marca/`, `assets/identidade/` — paleta de cores, tipografia, logo e mascote
+  reais que **Diego Design** e **Vitor Vetor** tratam como fonte de verdade inegociável
+- `assets/posts-finalizados/` — acervo de peças já publicadas, opcional mas recomendado
+- `skills/notion/SKILL.md` — schema real dos seus dois bancos do Notion, se for usar a **Nina
+  Notion**
+
+Todo arquivo de template vem marcado com `[PREENCHA AQUI]` — o comando
+`/marketing-squad:rodar-squad-social` verifica isso no primeiro passo e para a rodada, avisando
+exatamente o que falta, se algo ainda estiver com o placeholder.
 
 ## Suporte e treinamento
 

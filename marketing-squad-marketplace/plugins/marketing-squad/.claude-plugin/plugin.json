@@ -1,7 +1,7 @@
 {
   "name": "marketing-squad",
-  "description": "Squad de 6 agents para produção de conteúdo de marketing/Instagram/LinkedIn — Rita Referência, Carlos Carrossel, Lara Linkedin, Diego Design, Vitor Vetor e Nina Notion. Inclui geração de imagem via IA.",
-  "version": "1.1.0",
+  "description": "Squad de 6 agents para produção de conteúdo de marketing/Instagram/LinkedIn — Rita Referência, Carlos Carrossel, Lara Linkedin, Diego Design, Vitor Vetor e Nina Notion. Inclui pipeline orquestrado (/rodar-squad-social) e geração de imagem via IA. Personalize os dados de marca em pipeline/data/ e assets/ antes de rodar.",
+  "version": "1.2.0",
   "author": {
     "name": "Toral",
     "url": "https://alltoral.netlify.app/"
