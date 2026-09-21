@@ -3,9 +3,9 @@
   "owner": { "name": "Toral" },
   "plugins": [
     {
-      "name": "squad-alltoral",
-      "source": "./plugins/squad-alltoral",
-      "description": "Squad de agents para produção de conteúdo de marketing/Instagram"
+      "name": "marketing-squad",
+      "source": "./marketing-squad-marketplace/plugins/marketing-squad",
+      "description": "Squad de 6 agents para produção de conteúdo de marketing/Instagram/LinkedIn — Rita Referência, Carlos Carrossel, Lara Linkedin, Diego Design, Vera Veredicto e Nina Notion."
     }
   ]
 }
